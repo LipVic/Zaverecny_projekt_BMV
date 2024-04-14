@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Vector Script GUI</title>
+	<meta charset="utf-8">
+	<title>BMV PROJEKT</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<section>
+	<div class="header">
+		<h1 class="center">OBRÁZKY</h1>
+		<p class="center">Nakresli si svoj obrázok podľa vlastnej fantázie!</p>
+	</div>
+<section class="flex section1">
 	<form method="POST" action="/render">
-		<button>Zobraziť</button>
-		<textarea name="ves"></textarea>
+		<textarea id="textarea" name="ves" class="transition-property" placeholder=" Napíš kód aby sa objavil obrázok!"></textarea>
+		<p></p>
+		<button id="zobrazit" class="zobraziť">Zobraziť</button>
 	</form>
 </section>
-<section>
-	<img id="output" />
+<section class="flex section2">
+	<img id="output"/>
 </section>
 <script type="text/javascript" src="script.js" ></script>
+</section>
+<h1 class="popis">Nemáš žiadny nápad? Nechaj sa inšpirovať!</h1>
+<button class="ukazka" id="ukazka">Ukážka</button> 
 </body>
 </html>

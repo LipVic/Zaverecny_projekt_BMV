@@ -1,18 +1,95 @@
 * {
 	margin: 0;
 	padding: 0;
+	font-family: 'Monaco';
+	color:#faa607;
 }
-body {
-	display: flex;
+/*section{
+	display: inline-block;
+} */
+section, .section1{
+	margin-left: 50px;
+	float:left;
 }
-body > section {
-	flex-basis: 50%;
+
+img{
+	float:right;
+	margin-right:100px;
+	height:90vh;
+	width:100vh;
+	border:none;
 }
+
 textarea {
-	width: 100%;
+	width: 90vh;
 	height: 90vh;
+	max-height:500px;
+	max-width:400px;
+	display:block;
+	outline:none;
+	border: none;
+	background-color: #ffca66;
+	border-radius: 6px;
+	resize:none;
+	font-size: 15px;
 }
-img {
-	width: 100%;
-	height: auto;
+::placeholder {
+	color: rgb(110, 0, 103);
+	opacity: 1; /* Firefox */
+	font-family:"Monaco";
+  }
+  
+::-ms-input-placeholder { /* Edge 12 -18 */
+	color: rgb(110, 0, 103);
+	font-family:"Monaco";
+  }
+.transition-property {
+    background: #ffca66;
+    cursor: pointer;
+    transition-property: background-color;
+    transition-duration: 1s;
 }
+
+.transition-property:hover {
+    background-color: rgb(110, 0, 103);
+}
+.center {
+	margin: auto;
+	width: 50%;
+	text-align: center
+}
+
+.header {
+	padding: 60px;
+	text-align: center;
+	font-size: 20px;
+}
+
+button {
+	background-color: #faa607;
+	border: 1px;
+	border-radius: 6px;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+}
+button:hover {
+	background-color: #db9104;
+	color: white;
+}
+
+h1, .popis{
+	margin-top: 1000px;
+	margin-left: 50px;
+	text-align:left;
+	font-size:20px;
+}
+.ukazka{
+	margin-left:50px;
+	margin-top:20px;
+}
+
+/*ak sa vám nezdá aj nejaký popis, alebo niečo, kľudne to premenujte*/
