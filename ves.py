@@ -38,7 +38,7 @@ def render_ves(ves1):
                 farba_tvaru = tuple(int(hekss[i : i + 2], 16) for i in (0, 2, 4))
                 i = i.split(" ")
                 A, B = tuple(i[1:3]), tuple(i[3:5])
-                print(A)
+
                 A, B = tuple(int(float(w)) for w in A), tuple(int(float(w)) for w in B)
                 hrubka = int(float(i[5]))
                 thick_line(obr, A, B, hrubka, farba_tvaru)

@@ -15,19 +15,37 @@ function handleSubmit(e) {
 	fetch(url, { method: method, body: formular }) // Urobíme HTTP požiadavku na náš server POST /render a formularom v tele požiadavky 
 		.then((res) => res.blob()) // Dostali sme binárne dáta (blob)
 		.then((image) => {
-			document.querySelector("#output").src = URL.createObjectURL(image); // Nastavíme src našeho <img> na načítaný obrázok
-		})
+            const outputImg = document.querySelector("#output");
+			outputImg.src = URL.createObjectURL(image);
+            console.log(outputImg);
+            if (outputImg.src || outputImg.src.trim() === '') {
+                const errorElement = document.getElementById('pes');
+                errorElement.innerHTML = "Obrázok sa nepodarilo načítať."; 
+            } else {
+                const errorElement = document.getElementById('pes');
+                errorElement.innerHTML = "";
+				
+            }
+        })
 }
 const zobrazitButton = document.getElementById('zobrazit');
 zobrazitButton.addEventListener('click', handleSubmit);
 function stiahnutObrazok() {
 	const imageUrl = document.querySelector("#output").src;
-	const aElement = document.createElement('a');
-	aElement.download = 'obrazok.jpg';
-	aElement.href = imageUrl;
-	document.body.appendChild(aElement);
-	aElement.click();
-	document.body.removeChild(aElement);
+	const eror = document.getElementById('pes');
+
+	if (imageUrl){
+		eror.innerHTML = "";
+		const aElement = document.createElement('a');
+		aElement.download = 'obrazok.jpg';
+		aElement.href = imageUrl;
+		document.body.appendChild(aElement);
+		aElement.click();
+		document.body.removeChild(aElement);
+	}
+	else {
+		eror.innerHTML = "Najprv obázok nakresli!";
+	}
 }
 const stiahnut = document.getElementById('download');
 stiahnut.addEventListener('click', stiahnutObrazok);
