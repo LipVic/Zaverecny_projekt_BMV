@@ -16,15 +16,16 @@ function handleSubmit(e) {
 		.then((res) => res.blob()) // Dostali sme binárne dáta (blob)
 		.then((image) => {
             const outputImg = document.querySelector("#output");
-			outputImg.src = URL.createObjectURL(image);
+			
             console.log(outputImg);
-            if (outputImg.src || outputImg.src.trim() === '') {
+            if (ves === '') {
                 const errorElement = document.getElementById('pes');
                 errorElement.innerHTML = "Obrázok sa nepodarilo načítať."; 
-            } else {
+			}
+            else {
                 const errorElement = document.getElementById('pes');
                 errorElement.innerHTML = "";
-				
+				outputImg.src = URL.createObjectURL(image);
             }
         })
 }
