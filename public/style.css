@@ -1,7 +1,7 @@
 * {
 	margin: 0;
 	padding: 0;
-	font-family: 'Monaco';
+	font-family: Monaco, Consolas, 'Courier New', monospace;
 	color:#faa607;
 }
 /*section{
@@ -13,16 +13,25 @@ section, .section1{
 }
 
 img{
-	float:right;
 	margin-right:100px;
-	height:90vh;
-	width:100vh;
+	margin-left: auto;
+	height:65vh;
+	width:65vh;
 	border:none;
 }
 
+.flexsection2{
+	margin-right:100px;
+	margin-left: 100px;
+	height:65vh;
+	width:65vh;
+	border:none;
+	display: block;
+}
+
 textarea {
-	width: 90vh;
-	height: 90vh;
+	width: 50vw;
+	height: 40vh;
 	max-height:500px;
 	max-width:400px;
 	display:block;
@@ -36,12 +45,12 @@ textarea {
 ::placeholder {
 	color: rgb(110, 0, 103);
 	opacity: 1; /* Firefox */
-	font-family:"Monaco";
+	font-family: Monaco, Consolas, 'Courier New', monospace;
   }
   
 ::-ms-input-placeholder { /* Edge 12 -18 */
 	color: rgb(110, 0, 103);
-	font-family:"Monaco";
+	font-family: Monaco, Consolas, 'Courier New', monospace;
   }
 .transition-property {
     background: #ffca66;
@@ -58,7 +67,12 @@ textarea {
 	width: 50%;
 	text-align: center
 }
-
+.flexsection1{
+	width: 50vw;
+	height: 90vh;
+	max-height:500px;
+	max-width:400px
+}
 .header {
 	padding: 60px;
 	text-align: center;
@@ -82,7 +96,7 @@ button:hover {
 }
 
 h1, .popis{
-	margin-top: 1000px;
+	margin-top: 70vh;
 	margin-left: 50px;
 	text-align:left;
 	font-size:20px;
