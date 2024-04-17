@@ -41,6 +41,7 @@ textarea {
 	border-radius: 6px;
 	resize:none;
 	font-size: 15px;
+	cursor: pointer;
 }
 ::placeholder {
 	color: rgb(110, 0, 103);
@@ -58,6 +59,9 @@ textarea {
     transition-property: background-color;
     transition-duration: 1s;
 }
+textarea:hover::placeholder {
+    color: #faa607; /* Change the color on hover */
+}
 
 .transition-property:hover {
     background-color: rgb(110, 0, 103);
@@ -65,13 +69,14 @@ textarea {
 .center {
 	margin: auto;
 	width: 50%;
-	text-align: center
+	text-align: center;
+	font-size: larger;
 }
 .flexsection1{
 	width: 50vw;
 	height: 90vh;
 	max-height:500px;
-	max-width:400px
+	max-width:400px;
 }
 .header {
 	padding: 60px;
@@ -89,6 +94,7 @@ button {
 	text-decoration: none;
 	display: inline-block;
 	font-size: 16px;
+	cursor: pointer;
 }
 button:hover {
 	background-color: #db9104;
@@ -106,4 +112,3 @@ h1, .popis{
 	margin-top:20px;
 }
 
-/*ak sa vám nezdá aj nejaký popis, alebo niečo, kľudne to premenujte*/

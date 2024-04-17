@@ -89,6 +89,5 @@ def render_ves(ves1):
                 S, r, hrubka = tuple(i[1:3]), int(float(i[3])), int(float(i[4]))
                 S = tuple(int(float(w)) for w in S)
                 circle(obr, S, r, hrubka, farba_tvaru)
-    
 
     return obr
